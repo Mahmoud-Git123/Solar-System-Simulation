@@ -30,6 +30,16 @@ public class Planet{
         planetAngle++;
     }
 
+    //getter method for the planet angle to be implemeneted by the moon
+    public double getPlanetAngle(){
+        return planetAngle;
+    }
+
+    //getter method for the planet distance to be implemeneted by the moon
+    public double getPlanetDistance(){
+        return planetDistance;
+    }
+
     //finished drawing method
     public void finishedDrawing(){
         solar.finishedDrawing();
