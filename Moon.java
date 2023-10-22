@@ -9,6 +9,8 @@ public class Moon{
     private double centreRotation;
     private String moonColor;
 
+    private double moonSpeed;
+
     //Constructor
     public Moon(SolarSystem solar, double moonDiameter, double moonAngle, double centreRotation,double centreAngle, double moonDistance, String moonColor){
         this.solar = solar;
@@ -26,8 +28,8 @@ public class Moon{
     }
 
     //Animating moon movement
-    public void moveMoon(){
-        moonAngle = moonAngle + 3;
+    public void moveMoon(double moonSpeed){
+        moonAngle = moonAngle + moonSpeed;
         centreAngle++;
     }
 

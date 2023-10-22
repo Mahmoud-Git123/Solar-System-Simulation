@@ -10,6 +10,9 @@ public class Driver{
         //Creating earth object
         Planet earthObj = new Planet(solar, 50, 200, 0, 0, 0, "blue");
     
+        Moon earthMoonObj = new Moon(solar, 10, earthObj.getPlanetAngle(), earthObj.getPlanetDistance(), earthObj.getPlanetAngle(), 40 , "white");
+
+
         while(true){
 
             //Drawing the sun
@@ -18,6 +21,10 @@ public class Driver{
             //Drawing earth
             earthObj.drawPlanet();
             earthObj.movePlanet();
+
+            //Drawing earth's moon
+            earthMoonObj.drawMoon();
+            earthMoonObj.moveMoon(5);
 
             solar.finishedDrawing();
     
