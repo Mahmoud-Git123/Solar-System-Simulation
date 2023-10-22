@@ -7,8 +7,14 @@ public class Driver{
         //Creating sun object
         Sun sunObj = new Sun(solar, 200, 0, 0, "yellow");
 
+        //Creating earth object
+        Planet earthObj = new Planet(solar, 50, 50, 0, 0, 150, "blue");
+
         //Drawing the sun
         sunObj.drawSun();
+
+        //Drawing earth
+        earthObj.drawPlanet();
 
     }
 }
