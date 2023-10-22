@@ -8,13 +8,20 @@ public class Driver{
         Sun sunObj = new Sun(solar, 200, 0, 0, "yellow");
 
         //Creating earth object
-        Planet earthObj = new Planet(solar, 50, 50, 0, 0, 150, "blue");
+        Planet earthObj = new Planet(solar, 50, 200, 0, 0, 0, "blue");
+    
+        while(true){
 
-        //Drawing the sun
-        sunObj.drawSun();
+            //Drawing the sun
+            sunObj.drawSun();
 
-        //Drawing earth
-        earthObj.drawPlanet();
+            //Drawing earth
+            earthObj.drawPlanet();
+            earthObj.movePlanet();
 
+            solar.finishedDrawing();
+    
+
+        }
     }
 }

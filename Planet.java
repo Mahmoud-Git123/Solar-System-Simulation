@@ -25,5 +25,15 @@ public class Planet{
         solar.drawSolarObjectAbout(planetDistance, planetAngle, planetDiameter, planetColor, centreRotation, centreAngle);
     }
 
+    //Animating planet movement
+    public void movePlanet(){
+        planetAngle++;
+    }
+
+    //finished drawing method
+    public void finishedDrawing(){
+        solar.finishedDrawing();
+    }
+
 
 }
