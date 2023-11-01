@@ -9,7 +9,8 @@ public class Driver{
 
         //Creating earth object
         Planet earthObj = new Planet(solar, 50, 200, 0, 0, 0, "blue");
-        //Moon earthMoonObj = new Moon(solar, 10, earthObj.getPlanetAngle(), earthObj.getPlanetDistance(), earthObj.getPlanetAngle(), 40 , "white");
+        Moon earthMoonObj = new Moon(solar, 10, earthObj.getCircleAngle() + 50, earthObj.getCircleDistance(), earthObj.getCircleAngle(), 40 , "white");
+        //Moon earthMoonObj = new Moon(solar, 10, 200,0, 0, 40 , "white");
 
 
         while(true){
@@ -19,11 +20,11 @@ public class Driver{
 
             //Drawing earth
             earthObj.drawCircle();
-            earthObj.moveCircle();
+            earthObj.moveCircle1();
 
             //Drawing earth's moon
-            //earthMoonObj.drawMoon();
-            //earthMoonObj.moveMoon(5);
+            earthMoonObj.drawCircle();
+            earthMoonObj.moveCircle2(10);
 
             solar.finishedDrawing();
     

@@ -33,13 +33,25 @@ public class Circle {
     public double getCircle(){
         return circleDistance;
     }
-
-    public void drawCircle(){
-        solar.drawSolarObjectAbout(circleDistance, circleAngle, circleDiameter, circleColor, circleCentreAngle, circleAngle);
+    public double getCircleCenterAngle(){
+        return circleAngle;
     }
 
-    public void moveCircle(){
+    public void drawCircle(){
+        solar.drawSolarObjectAbout(circleDistance, circleAngle, circleDiameter, circleColor,circleCentreRotation, circleCentreAngle);
+    }
+
+    public void moveCircle1(){
         circleAngle++;
+    }
+
+    public void moveCircle2(double circleMoveSpeed){
+        circleAngle = circleAngle + circleMoveSpeed;
+        circleCentreAngle++;
+    }
+
+    public void setCentreAngle(double circleCentreAngle){
+        this.circleCentreAngle = circleCentreAngle;
     }
 
 }
