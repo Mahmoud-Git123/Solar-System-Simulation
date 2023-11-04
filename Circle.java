@@ -36,18 +36,27 @@ public class Circle {
     public double getCircleCenterAngle(){
         return circleAngle;
     }
+    public SolarSystem getSolar(){
+        return solar;
+    }
 
     public void drawCircle(){
         solar.drawSolarObjectAbout(circleDistance, circleAngle, circleDiameter, circleColor,circleCentreRotation, circleCentreAngle);
     }
 
-    public void moveCircle1(){
-        circleAngle++;
+    public void moveCircle1(double circleMoveSpeed){
+        circleAngle = circleAngle + circleMoveSpeed;
     }
 
     public void moveCircle2(double circleMoveSpeed){
         circleAngle = circleAngle + circleMoveSpeed;
         circleCentreAngle++;
+    }
+
+    public void moveCircle3(){
+    circleAngle++;
+    circleCentreAngle++;
+    circleCentreRotation++;
     }
 
     public void setCentreAngle(double circleCentreAngle){
