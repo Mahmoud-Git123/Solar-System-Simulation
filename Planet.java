@@ -8,9 +8,5 @@ public class Planet extends Circle{
         
     }
 
-    public void movePlanet(){
-        planetAngle++;
-    }
-
 
 }
