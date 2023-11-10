@@ -5,7 +5,7 @@ public class Driver{
         SolarSystem solar = new SolarSystem(1000, 1000);
 
         //SUN
-        Sun sunObj = new Sun(solar, 120, 0, 0, "yellow");
+        Sun sunObj = new Sun(solar, 120, 0,0, 0, 0, "yellow");
 
         //EARTH
         Planet earthObj = new Planet(solar, 30, 210, 80, 0, 0, "blue");
@@ -53,10 +53,11 @@ public class Driver{
 
         while(true){
 
+            //Drawing the asteroid belt
             ast.drawBelt();
 
             //Drawing the sun
-            sunObj.drawSun();
+            sunObj.drawCircle();
 
             //Drawing earth
             earthObj.drawCircle();
@@ -88,6 +89,7 @@ public class Driver{
             jupiterObj.drawCircle();
             jupiterObj.moveCircle1(1);
 
+            //Drawing 4 main moons of jupiter
             jupiterMoonObj1.drawCircle();
             jupiterMoonObj2.drawCircle();
             jupiterMoonObj3.drawCircle();
@@ -98,41 +100,43 @@ public class Driver{
             jupiterMoonObj4.moveCircle2(3);
 
 
-            //Saturn
+            //Drawing Saturn Rings
             saturnRingObj.drawCircle();
             saturnRingObj.moveCircle1(1);
 
+            
             saturnRingShade.drawCircle();
             saturnRingShade.moveCircle1(1);
 
+            //Drawing Saturn
             saturnObj.drawCircle();
             saturnObj.moveCircle1(1);
 
-            //Uranus
+            //Drawing Uranus
             uranusObj.drawCircle();
             uranusObj.moveCircle1(1);
 
+            //Drawing Uranus' Moons
             uranusMoon1.drawCircle();
             uranusMoon2.drawCircle();
             uranusMoon3.drawCircle();
             uranusMoon4.drawCircle();
             uranusMoon5.drawCircle();
-
             uranusMoon1.moveCircle2(3);
             uranusMoon2.moveCircle2(3);
             uranusMoon3.moveCircle2(3);
             uranusMoon4.moveCircle2(3);
             uranusMoon5.moveCircle2(3);
 
-            //Neptune
+            //Drawing Neptune
             neptuneObj.drawCircle();
             neptuneObj.moveCircle1(1);
 
+            //Drawing Neptune's moons
             neptuneMoonObj.drawCircle();
             neptuneMoonObj.moveCircle2(3);
 
- 
-
+            //Finished drawing
             solar.finishedDrawing();
     
 

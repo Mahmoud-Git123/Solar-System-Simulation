@@ -1,5 +1,6 @@
 public abstract class Circle {
 
+    //Variables
     private double circleDistance;
     private double circleDiameter;
     private double circleAngle;
@@ -8,8 +9,7 @@ public abstract class Circle {
     private String circleColor;
     private SolarSystem solar;
 
-    private double circleSpeed;
-
+    //constructor
     public Circle(SolarSystem solar, double circleDistance, double circleDiameter, double circleAngle, double circleCentreAngle, double circleCentreRotation, String circleColor){
         this.solar = solar;
         this.circleDistance = circleDistance;
@@ -21,6 +21,32 @@ public abstract class Circle {
 
     }
 
+    //draw circle method
+    public void drawCircle(){
+        solar.drawSolarObjectAbout(circleDistance, circleAngle, circleDiameter, circleColor,circleCentreRotation, circleCentreAngle);
+    }
+
+    //first way to move (revolving around a primary object)
+    public void moveCircle1(double circleMoveSpeed){
+        circleAngle = circleAngle + circleMoveSpeed;
+    }
+
+    //second way to move (revolving around a secondary object)
+    public void moveCircle2(double circleMoveSpeed){
+        circleAngle = circleAngle + circleMoveSpeed;
+        circleCentreAngle++;
+    }
+
+    //Setter methods to confirm movement of an object
+    public void setCentreAngle(double circleCentreAngle){
+        this.circleCentreAngle = circleCentreAngle;
+    }
+
+    public void setAngle(double circleAngle){
+        this.circleAngle = circleAngle;
+    }
+
+    //Getter methods in case access is needed from any classes
     public double getCircleDistance(){
         return circleDistance;
     }
@@ -39,33 +65,5 @@ public abstract class Circle {
     public SolarSystem getSolar(){
         return solar;
     }
-
-    public void drawCircle(){
-        solar.drawSolarObjectAbout(circleDistance, circleAngle, circleDiameter, circleColor,circleCentreRotation, circleCentreAngle);
-    }
-
-    public void moveCircle1(double circleMoveSpeed){
-        circleAngle = circleAngle + circleMoveSpeed;
-    }
-
-    public void moveCircle2(double circleMoveSpeed){
-        circleAngle = circleAngle + circleMoveSpeed;
-        circleCentreAngle++;
-    }
-
-    public void moveCircle3(){
-    circleAngle++;
-    circleCentreAngle++;
-    circleCentreRotation++;
-    }
-
-    public void setCentreAngle(double circleCentreAngle){
-        this.circleCentreAngle = circleCentreAngle;
-    }
-
-        public void setAngle(double circleAngle){
-        this.circleAngle = circleAngle;
-    }
-
 
 }
