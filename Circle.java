@@ -1,4 +1,4 @@
-public class Circle {
+public abstract class Circle {
 
     private double circleDistance;
     private double circleDiameter;
@@ -62,5 +62,10 @@ public class Circle {
     public void setCentreAngle(double circleCentreAngle){
         this.circleCentreAngle = circleCentreAngle;
     }
+
+        public void setAngle(double circleAngle){
+        this.circleAngle = circleAngle;
+    }
+
 
 }

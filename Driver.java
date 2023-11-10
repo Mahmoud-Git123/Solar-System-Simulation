@@ -2,44 +2,49 @@ public class Driver{
     public static void main(String args[]){
 
         //SOLAR SYSTEM
-        SolarSystem solar = new SolarSystem(1500, 1500);
+        SolarSystem solar = new SolarSystem(1000, 1000);
 
         //SUN
-        Sun sunObj = new Sun(solar, 150, 0, 0, "yellow");
+        Sun sunObj = new Sun(solar, 120, 0, 0, "yellow");
 
         //EARTH
-        Planet earthObj = new Planet(solar, 45, 210, 80, 0, 0, "blue");
-        Moon earthMoonObj = new Moon(solar, 10, earthObj.getCircleAngle() + 50, earthObj.getCircleDistance(), earthObj.getCircleAngle(), 40 , "grey");
+        Planet earthObj = new Planet(solar, 30, 210, 80, 0, 0, "blue");
+        Moon earthMoonObj = new Moon(solar, 10, earthObj.getCircleAngle() + 50, earthObj.getCircleDistance(), earthObj.getCircleAngle(), 25 , "grey");
 
         //MARS
-        Planet marsObj = new Planet(solar, 40, 280, 35, 0, 0, "red");
-        Moon marsMoonObj1 = new Moon(solar, 10, marsObj.getCircleAngle() + 50, marsObj.getCircleDistance(), marsObj.getCircleAngle(), 30 , "grey");
-        Moon marsMoonObj2 = new Moon(solar, 5, marsObj.getCircleAngle() + 10, marsObj.getCircleDistance(), marsObj.getCircleAngle(), 37 , "grey");
+        Planet marsObj = new Planet(solar, 25, 270, 35, 0, 0, "red");
+        Moon marsMoonObj1 = new Moon(solar, 8, marsObj.getCircleAngle() + 50, marsObj.getCircleDistance(), marsObj.getCircleAngle(), 25 , "grey");
+        Moon marsMoonObj2 = new Moon(solar, 5, marsObj.getCircleAngle() + 10, marsObj.getCircleDistance(), marsObj.getCircleAngle(), 23 , "grey");
 
         //VENUS
-        Planet venusObj = new Planet(solar, 30, 140, 25, 0, 0, "orange");
+        Planet venusObj = new Planet(solar, 20, 140, 25, 0, 0, "orange");
         
         //MERCURY
-        Planet mercuryObj = new Planet(solar, 20, 100, 200, 0, 0, "white");
+        Planet mercuryObj = new Planet(solar, 16, 100, 200, 0, 0, "orange");
 
         //JUPITER
-        Planet jupiterObj = new Planet(solar, 100, 365, 120, 0, 0, "red");
-        Moon jupiterMoonObj1 = new Moon(solar, 8, jupiterObj.getCircleAngle() + 0, jupiterObj.getCircleDistance(), jupiterObj.getCircleAngle(), 65 , "grey");
-        Moon jupiterMoonObj2 = new Moon(solar, 12, jupiterObj.getCircleAngle() + 120, jupiterObj.getCircleDistance(), jupiterObj.getCircleAngle(), 70 , "grey");
-        Moon jupiterMoonObj3 = new Moon(solar, 10, jupiterObj.getCircleAngle() + 210, jupiterObj.getCircleDistance(), jupiterObj.getCircleAngle(),75 , "grey");
-        Moon jupiterMoonObj4 = new Moon(solar, 5, jupiterObj.getCircleAngle() + 180, jupiterObj.getCircleDistance(), jupiterObj.getCircleAngle(), 80 , "grey");
+        Planet jupiterObj = new Planet(solar, 70, 365, 120, 0, 0, "red");
+        Moon jupiterMoonObj1 = new Moon(solar, 8, jupiterObj.getCircleAngle() + 0, jupiterObj.getCircleDistance(), jupiterObj.getCircleAngle(), 50 , "grey");
+        Moon jupiterMoonObj2 = new Moon(solar, 12, jupiterObj.getCircleAngle() + 120, jupiterObj.getCircleDistance(), jupiterObj.getCircleAngle(), 50 , "grey");
+        Moon jupiterMoonObj3 = new Moon(solar, 10, jupiterObj.getCircleAngle() + 210, jupiterObj.getCircleDistance(), jupiterObj.getCircleAngle(),50 , "grey");
+        Moon jupiterMoonObj4 = new Moon(solar, 5, jupiterObj.getCircleAngle() + 180, jupiterObj.getCircleDistance(), jupiterObj.getCircleAngle(), 50 , "grey");
 
         //SATURN (WITH RINGS)
-        Planet saturnObj = new Planet(solar, 65, 430, 220, 0, 0, "yellow");
-        Planet saturnRingShade = new Planet(solar, 100, 430, 220, 0, 0, "black");
-        Planet saturnRingObj = new Planet(solar, 130, 430, 220, 0, 0, "grey");
+        Planet saturnObj = new Planet(solar, 45, 370, 220, 0, 0, "yellow");
+        Planet saturnRingShade = new Planet(solar, 80, 370, 220, 0, 0, "black");
+        Planet saturnRingObj = new Planet(solar, 110, 370, 220, 0, 0, "grey");
 
         //URANUS
-        Planet uranusObj = new Planet(solar, 55, 500, 160, 0, 0, "grey");
-
+        Planet uranusObj = new Planet(solar, 35, 380, 160, 0, 0, "grey");
+        Moon uranusMoon1 = new Moon(solar, 8, uranusObj.getCircleAngle() + 0, uranusObj.getCircleDistance(), uranusObj.getCircleAngle(), 28 , "grey");
+        Moon uranusMoon2 = new Moon(solar, 12, uranusObj.getCircleAngle() + 120, uranusObj.getCircleDistance(), uranusObj.getCircleAngle(), 28 , "grey");
+        Moon uranusMoon3 = new Moon(solar, 10, uranusObj.getCircleAngle() + 210, uranusObj.getCircleDistance(), uranusObj.getCircleAngle(),28 , "grey");
+        Moon uranusMoon4 = new Moon(solar, 5, uranusObj.getCircleAngle() + 180, uranusObj.getCircleDistance(), uranusObj.getCircleAngle(), 28 , "grey");
+        Moon uranusMoon5 = new Moon(solar, 5, uranusObj.getCircleAngle() + 200, uranusObj.getCircleDistance(), uranusObj.getCircleAngle(), 28 , "grey");
 
         //NEPTUNE
-        Planet neptuneObj = new Planet(solar, 45, 600, 200, 0, 0, "blue");
+        Planet neptuneObj = new Planet(solar, 25, 470, 200, 0, 0, "blue");
+        Moon neptuneMoonObj = new Moon(solar, 8, neptuneObj.getCircleAngle() + 0, neptuneObj.getCircleDistance(), neptuneObj.getCircleAngle(), 20 , "grey");
 
 
         Asteroid ast = new Asteroid(solar, 0, 0, 0, 0, 0, "white");
@@ -47,8 +52,9 @@ public class Driver{
 
 
         while(true){
-            
+
             ast.drawBelt();
+
             //Drawing the sun
             sunObj.drawSun();
 
@@ -106,9 +112,24 @@ public class Driver{
             uranusObj.drawCircle();
             uranusObj.moveCircle1(1);
 
+            uranusMoon1.drawCircle();
+            uranusMoon2.drawCircle();
+            uranusMoon3.drawCircle();
+            uranusMoon4.drawCircle();
+            uranusMoon5.drawCircle();
+
+            uranusMoon1.moveCircle2(3);
+            uranusMoon2.moveCircle2(3);
+            uranusMoon3.moveCircle2(3);
+            uranusMoon4.moveCircle2(3);
+            uranusMoon5.moveCircle2(3);
+
             //Neptune
             neptuneObj.drawCircle();
             neptuneObj.moveCircle1(1);
+
+            neptuneMoonObj.drawCircle();
+            neptuneMoonObj.moveCircle2(3);
 
  
 
