@@ -1,3 +1,8 @@
+/**
+ * This abstract class provides a the base template and movement for any circle
+ * @author Mahmoud Abdelfattah
+ */
+
 public abstract class Circle {
 
     //Variables
@@ -8,6 +13,17 @@ public abstract class Circle {
     private double circleCentreRotation;
     private String circleColor;
     private SolarSystem solar;
+
+    /**
+	 * Constructor
+	 * @param solar instance of the solar system
+	 * @param circleDistance distance of the circle from the object revolved/moved around
+     * @param circleDiameter the diameter of the circle
+     * @param circleAngle the angle of the circle in respect to the object revolved/moved around
+     * @param circleCentreAngle the centre angle for the the circle
+     * @param circleCentreRotation the centre point of rotation for the circle
+     * @param circleColor the color of the circle
+	 */
 
     //constructor
     public Circle(SolarSystem solar, double circleDistance, double circleDiameter, double circleAngle, double circleCentreAngle, double circleCentreRotation, String circleColor){
@@ -21,17 +37,34 @@ public abstract class Circle {
 
     }
 
+    /**
+	 * drawCircle method
+	 * implements the "drawSolarObjectAbout" using the solar instance form the solar system class
+	 */
+
     //draw circle method
     public void drawCircle(){
         solar.drawSolarObjectAbout(circleDistance, circleAngle, circleDiameter, circleColor,circleCentreRotation, circleCentreAngle);
     }
 
-    //first way to move (revolving around a primary object)
+
+    /**
+	 * moveCircle1 method
+     * @param circleMoveSpeed allows to change the speed of the circle movement
+	 * Changes the circle angle by incrementing it
+     * this allows for revolving around a primary object
+	 */
+
     public void moveCircle1(double circleMoveSpeed){
         circleAngle = circleAngle + circleMoveSpeed;
     }
 
-    //second way to move (revolving around a secondary object)
+    /**
+	 * moveCircle2 method
+     * @param circleMoveSpeed allows to change the speed of the circle movement
+	 * Changes the circle centre angle by incrementing it
+     * this allows for revolving around a primary object
+	 */
     public void moveCircle2(double circleMoveSpeed){
         circleAngle = circleAngle + circleMoveSpeed;
         circleCentreAngle++;

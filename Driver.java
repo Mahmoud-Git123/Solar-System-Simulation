@@ -1,3 +1,8 @@
+/**
+ * This class provides is the driver class having the main method
+ * @author Mahmoud Abdelfattah
+ */
+
 public class Driver{
     public static void main(String args[]){
 
